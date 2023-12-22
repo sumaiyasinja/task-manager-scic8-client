@@ -2,6 +2,11 @@ import { createBrowserRouter } from "react-router-dom";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Home from "../pages/Home/Home";
 import Main from "../layouts/Main";
+import Register from './../pages/Register/Register';
+import Login from './../pages/Login/Login';
+import About from './../pages/About/About';
+import PrivateRoute from './PrivateRoute';
+import Dashboard from './../pages/Dashboard/Dashboard';
 
 const router = createBrowserRouter([
     {
@@ -13,34 +18,25 @@ const router = createBrowserRouter([
           path: "/",
           element: <Home />,
         },
-        // {
-        //   path: "/aboutUs",
-        //   element: <AboutUs />,
-        // },
+        {
+          path: "/aboutUs",
+          element: <About />,
+        },
         
         
-        // {
-        //   path: "/login",
-        //   element: <Login></Login>,
-        // },
-        // {
-        //   path: "/register",
-        //   element: <Register></Register>
-        // },
-        // {
-        //   path: "/addArticle",
-        //   element: <PrivateRoute><AddArticles></AddArticles></PrivateRoute>
-        // },
-        
-        // {
-        //   path: "/UpdateArticle/:id",
-        //   element: <PrivateRoute><UpdateArticle></UpdateArticle></PrivateRoute>
-        // },
-        // {
-        //   path: "/profile",
-        //   element: <PrivateRoute><UserProfile></UserProfile></PrivateRoute>
-        // },
-        
+        {
+          path: "/login",
+          element: <Login></Login>,
+        },
+        {
+          path: "/register",
+          element: <Register></Register>
+        },
+
+        {
+          path: "/dashboard",
+          element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>
+        },
         
       ],
     },

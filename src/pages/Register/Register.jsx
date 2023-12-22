@@ -119,7 +119,7 @@ const Register = () => {
       <Toaster></Toaster>
       <div className="w-full px-6 py-16 rounded-md sm:px-12 md:px-16 xl:col-span-3 bg-gray-50">
         <img
-          src="https://i.ibb.co/vwKr253/Untitled.png"
+          src="https://www.proofhub.com/articles/wp-content/uploads/2018/11/Top-17-Task-Management-Software-for-Your-Business0A.jpeg"
           alt="news logo"
           className="object-cover  rounded-md xl:col-span-3 bg-gray-500"
         />

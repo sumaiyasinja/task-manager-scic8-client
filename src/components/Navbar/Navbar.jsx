@@ -1,11 +1,12 @@
-import { Link, NavLink } from "react-router-dom";
+import {  NavLink, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 
 const Navbar = () => {
   const { user, logOut } = useAuth();
+  const navigate = useNavigate();
   const handleLogOut = () => {
     logOut()
-     
+    navigate("/")
   };
 
   const NavLinks = (
@@ -80,7 +81,7 @@ const Navbar = () => {
               >
                 logout
               </button>
-              <Link to="/profile" className="avatar online">
+              <div className="avatar online">
                 <div className="w-9 ring ring-green-600 rounded-full">
                   {user.photoURL ? (
                     <img src={user?.photoURL} alt="" />
@@ -91,7 +92,7 @@ const Navbar = () => {
                     />
                   )}
                 </div>
-              </Link>
+              </div>
             </>
           ) : (
             <>
@@ -111,15 +112,7 @@ const Navbar = () => {
           )}
         </div>
       </div>
-      {/* todo : future work if dropdowen menu needed */}
-      {/* {   user && dropdown ?
-       
-        <ul className="absolute z-[60] right-2 menu menu-compact dropdown-content p-2 shadow bg-base-100 rounded-box w-52">
-          <Link to="/profile" className="w-full text-center rounded hover:bg-blue-300 hover:text-white hover:font-semibold">My Profile</Link>
-          <li onClick={handleLogOut} className="w-full text-center rounded hover:bg-blue-300 hover:text-white hover:font-semibold">Logout</li>
-        </ul>
-      :<></>
-      }     */}
+    
     </div>
   );
 };

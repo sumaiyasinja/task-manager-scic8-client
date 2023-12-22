@@ -119,7 +119,7 @@ const Login = () => {
           </form>
         </div>
         <img
-          src="https://i.ibb.co/C7S8tCG/newspaper-cartoon.png"
+          src="https://www.cflowapps.com/wp-content/uploads/2018/07/task-management-process.png"
           alt=""
           className="object-cover w-full rounded-md xl:col-span-3 bg-gray-500"
         />
